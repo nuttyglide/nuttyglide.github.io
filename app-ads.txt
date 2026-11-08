@@ -1,5 +1,5 @@
 # Google AdMob
-google.com, pub-7036925735501390, DIRECT, f08c47fec0942fa0
+google.com, pub-6299736271258417, DIRECT, f08c47fec0942fa0
 
 # Unity Ads (through AdMob mediation), AISQLI's account: list given by the Unity dashboard on 8 November 2026
 adwmg.com, 159512, RESELLER, c9688a22012618e7
