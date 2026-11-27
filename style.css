@@ -710,6 +710,176 @@ h3 {
   }
 }
 
+/* Scroll hint: a little mouse (an arrow on touch screens) at the bottom of the first screen.
+   It scrolls away with the hero, and fades out as soon as the page moves where supported. */
+.scroll-hint {
+  position: absolute;
+  z-index: 3;
+  inset-inline: 0;
+  top: calc(100vh - 108px);
+  top: min(calc(100svh - 108px), calc(100% - 108px));
+  width: max-content;
+  margin-inline: auto;
+  padding: 6px 10px;
+  font-family: var(--display);
+  font-size: 17px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: var(--outline-text);
+}
+
+.hint-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+}
+
+.hint-icon {
+  position: relative;
+  display: block;
+  width: 28px;
+  height: 44px;
+  background: var(--paper);
+  border: var(--line);
+  border-radius: 16px;
+  box-shadow: 0 3px 0 var(--ink);
+  transition: translate 0.15s ease, box-shadow 0.15s ease;
+}
+
+.hint-icon::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  width: 6px;
+  height: 10px;
+  margin-left: -3px;
+  background: var(--ink);
+  border-radius: 3px;
+  animation: wheel 1.6s ease-in-out infinite;
+}
+
+.scroll-hint:hover .hint-icon {
+  translate: 0 2px;
+  box-shadow: 0 1px 0 var(--ink);
+}
+
+@keyframes wheel {
+  0% {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+
+  25%,
+  65% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(13px);
+  }
+}
+
+/* Touch screens and small windows: an arrow instead of the mouse */
+@media (hover: none), (pointer: coarse), (max-width: 620px), (max-height: 500px) {
+  .hint-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+  }
+
+  .hint-icon::before {
+    top: 8px;
+    width: 13px;
+    height: 13px;
+    margin-left: -6.5px;
+    background: none;
+    border: solid var(--ink);
+    border-width: 0 3.5px 3.5px 0;
+    border-radius: 0 0 3px;
+    rotate: 45deg;
+    animation-name: chevron;
+  }
+
+  @keyframes chevron {
+    50% {
+      translate: 0 6px;
+    }
+  }
+}
+
+/* Phones: the first screen ends on the buttons, so the hint becomes a small sticker that lets taps through */
+@media (max-width: 620px), (max-height: 500px) {
+  .scroll-hint {
+    top: calc(100vh - 64px);
+    top: min(calc(100svh - 64px), calc(100% - 64px));
+    padding: 0;
+    font-size: 16px;
+    color: var(--ink);
+    text-shadow: none;
+    pointer-events: none;
+    border-radius: 999px;
+  }
+
+  .hint-body {
+    flex-direction: row;
+    gap: 8px;
+    padding: 4px 16px 4px 4px;
+    background: var(--paper);
+    border: var(--line);
+    border-radius: 999px;
+    box-shadow: var(--pop);
+  }
+
+  .hint-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--yellow);
+    border-width: 2.5px;
+    box-shadow: none;
+  }
+
+  .hint-icon::before {
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    margin-left: -5px;
+    border-width: 0 3px 3px 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hint-body {
+    animation: hint-in 0.6s 1.3s ease-out both;
+  }
+}
+
+@keyframes hint-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+@supports (animation-timeline: scroll()) {
+  .scroll-hint {
+    animation: hint-out linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 160px;
+  }
+
+  @keyframes hint-out {
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
 /* ---------- Ground band with the numbers ---------- */
 .ground {
   position: relative;
