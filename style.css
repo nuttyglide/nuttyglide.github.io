@@ -800,7 +800,8 @@ h3 {
     background: none;
     border: solid var(--ink);
     border-width: 0 3.5px 3.5px 0;
-    border-radius: 0 0 3px;
+    /* No rounded corner: Safari draws a rotated border with one rounded corner as a faint hairline */
+    border-radius: 0;
     rotate: 45deg;
     animation-name: chevron;
   }
