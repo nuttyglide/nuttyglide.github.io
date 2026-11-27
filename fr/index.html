@@ -2,68 +2,432 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
-  <title>Nutty Glide : course d'écureuil volant</title>
-  <meta name="description" content="Cours, saute et plane à travers la forêt avec un écureuil volant. Le renard est juste derrière toi ! Un jeu gratuit pour iPhone, iPad et Android.">
+  <title>Nutty Glide : course d'écureuil volant</title>
+  <meta name="description" content="Cours, saute et plane à travers la forêt avec un écureuil volant. Le renard est juste derrière toi ! Un jeu gratuit pour iPhone, iPad et Android.">
+  <meta name="theme-color" content="#4fadec">
+  <meta name="apple-itunes-app" content="app-id=6833694876">
+  <link rel="canonical" href="https://nuttyglide.github.io/fr/">
+  <link rel="alternate" hreflang="en" href="https://nuttyglide.github.io/">
+  <link rel="alternate" hreflang="fr" href="https://nuttyglide.github.io/fr/">
+  <link rel="alternate" hreflang="x-default" href="https://nuttyglide.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nutty Glide">
+  <meta property="og:title" content="Nutty Glide : course d'écureuil volant">
+  <meta property="og:description" content="Cours, saute et plane à travers la forêt avec un écureuil volant. Le renard est juste derrière toi ! Gratuit sur iPhone, iPad et Android.">
+  <meta property="og:url" content="https://nuttyglide.github.io/fr/">
+  <meta property="og:image" content="https://nuttyglide.github.io/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="../img/favicon.png">
   <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
-  <link rel="alternate" hreflang="en" href="../">
+  <link rel="preload" href="../fonts/LilitaOne-Regular.woff" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+  <a class="skip" href="#main">Aller au contenu</a>
+
   <header class="top">
     <div class="wrap">
-      <a class="brand" href="./"><img src="../img/icon.png" alt="">Nutty Glide</a>
-      <nav class="nav">
-        <a href="support.html">Aide</a>
-        <a href="privacy.html">Confidentialité</a>
-        <a href="../" hreflang="en" lang="en">English</a>
+      <a class="brand" href="./"><img src="../img/icon.png" width="512" height="512" alt="">Nutty Glide</a>
+      <nav class="nav" aria-label="Menu principal">
+        <a class="nav-link" href="#how">Comment jouer</a>
+        <a class="nav-link" href="#faq">FAQ</a>
+        <a class="nav-link" href="support.html">Aide</a>
+        <a class="lang" href="../" hreflang="en" lang="en"><span aria-hidden="true">EN</span><span class="sr-only">English</span></a>
+        <a class="btn btn-small" href="#download">Jouer</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <div class="wrap">
-      <section class="hero">
-        <img src="../img/logo.png" width="900" height="585" alt="Nutty Glide">
-        <p class="tagline">Cours, saute et plane à travers la forêt.<br>Le renard est juste derrière toi&nbsp;!</p>
-        <div class="stores">
-          <a href="https://apps.apple.com/app/nutty-glide/id6833694876"><img src="../img/badge-app-store-fr.svg" width="127" height="40" alt="Télécharger dans l'App Store"></a>
-          <a href="https://play.google.com/store/apps/details?id=com.aisqli.nuttyglide&amp;hl=fr"><img src="../img/badge-google-play-fr.png" width="646" height="192" alt="Disponible sur Google Play"></a>
-        </div>
-      </section>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="sky" aria-hidden="true">
+        <span class="sun"></span>
+        <span class="cloud c1"></span>
+        <span class="cloud c2"></span>
+        <span class="cloud c3"></span>
+      </div>
 
-      <section class="features">
-        <div class="card">
-          <h3>Touche pour sauter</h3>
-          <p>Plus tu restes appuyé, plus l'écureuil volant saute haut. Touche encore en l'air pour un double saut.</p>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><img src="../img/icons/hazelnut.svg" width="64" height="64" alt="">Jeu de course gratuit · iPhone, iPad et Android</p>
+          <h1 id="hero-title"><img class="logo" src="../img/logo.png" width="900" height="585" alt="Nutty Glide"></h1>
+          <p class="tagline">Le renard est juste derrière toi&nbsp;!</p>
+          <p class="lead">Cours, saute et plane avec un écureuil volant à travers une forêt de dessin animé qui ne s'arrête jamais. Ramasse des noisettes, évite les pièges et va le plus loin possible&nbsp;!</p>
+          <div class="stores">
+            <a href="https://apps.apple.com/app/nutty-glide/id6833694876"><img src="../img/badge-app-store-fr.svg" width="127" height="40" alt="Télécharger dans l'App Store"></a>
+            <a href="https://play.google.com/store/apps/details?id=com.aisqli.nuttyglide&amp;hl=fr"><img src="../img/badge-google-play-fr.png" width="646" height="192" alt="Disponible sur Google Play"></a>
+          </div>
+          <ul class="chips">
+            <li><img src="../img/icons/check.svg" width="64" height="64" alt="">Gratuit</li>
+            <li><img src="../img/icons/plane.svg" width="64" height="64" alt="">Sans internet</li>
+            <li><img src="../img/icons/heart.svg" width="64" height="64" alt="">Classé 4+</li>
+          </ul>
         </div>
-        <div class="card">
-          <h3>Reste appuyé pour planer</h3>
-          <p>Déploie tes ailes et plane au-dessus de l'eau, des ronces et des pièges.</p>
+
+        <div class="hero-art">
+          <div class="phone">
+            <picture>
+              <source type="image/webp" srcset="../img/shots/glide-720.webp 720w, ../img/shots/glide-1280.webp 1280w" sizes="(max-width: 1020px) 92vw, 620px">
+              <img src="../img/shots/glide.jpg" width="1280" height="588" alt="L'écureuil volant plane au-dessus de la forêt, entre des escaliers de piliers de terre, avec des noisettes à ramasser.">
+            </picture>
+          </div>
+          <p class="sticker s1"><img src="../img/icons/tap.svg" width="64" height="64" alt="">Touche pour sauter</p>
+          <p class="sticker s2"><img src="../img/icons/glide.svg" width="64" height="64" alt="">Reste appuyé pour planer</p>
+          <img class="nut n1" src="../img/icons/hazelnut.svg" width="64" height="64" alt="">
+          <img class="nut n2" src="../img/icons/hazelnut.svg" width="64" height="64" alt="">
+          <img class="nut n3" src="../img/icons/hazelnut.svg" width="64" height="64" alt="">
         </div>
-        <div class="card">
-          <h3>Échappe au renard</h3>
-          <p>Méfie-toi de l'aigle le jour, et du loup-garou quand la nuit tombe&nbsp;!</p>
+      </div>
+
+      <div class="land" aria-hidden="true">
+        <div class="layer l-mount"></div>
+        <div class="layer l-far"></div>
+        <div class="layer l-near"></div>
+        <div class="layer l-bush"></div>
+      </div>
+    </section>
+
+    <section class="ground" aria-label="Le jeu en chiffres">
+      <ul class="stats wrap">
+        <li><strong>1</strong><span>doigt pour jouer</span></li>
+        <li><strong>100</strong><span>missions</span></li>
+        <li><strong>24</strong><span>langues</span></li>
+        <li><strong>∞</strong><span>pas de ligne d'arrivée</span></li>
+      </ul>
+    </section>
+
+    <section class="section" id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">Comment jouer</p>
+          <h2 id="how-title">Un doigt. Une forêt sans fin.</h2>
+          <p>Tu comprends en une seconde, et tu ne voudras plus t'arrêter.</p>
         </div>
-        <div class="card">
-          <h3>Ramasse des noisettes</h3>
-          <p>Débloque de nouveaux écureuils et fais durer plus longtemps ta bulle, ton aimant et ta rafale.</p>
+        <ol class="steps">
+          <li class="step reveal">
+            <div class="step-icon"><img src="../img/icons/tap.svg" width="64" height="64" alt=""></div>
+            <h3>Touche pour sauter</h3>
+            <p>Touche encore en l'air pour un double saut, ou rebondis sur un mur.</p>
+          </li>
+          <li class="step reveal">
+            <div class="step-icon"><img src="../img/icons/hold.svg" width="64" height="64" alt=""></div>
+            <h3>Reste appuyé pour sauter plus haut</h3>
+            <p>Plus tu restes appuyé, plus l'écureuil volant saute haut.</p>
+          </li>
+          <li class="step reveal">
+            <div class="step-icon"><img src="../img/icons/glide.svg" width="64" height="64" alt=""></div>
+            <h3>Continue pour planer</h3>
+            <p>Déploie tes ailes et plane au-dessus de l'eau, des ronces et des pièges.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Le jeu">
+      <div class="wrap features">
+        <article class="feature reveal">
+          <div class="feature-media">
+            <div class="phone">
+              <picture>
+                <source type="image/webp" srcset="../img/shots/fox-720.webp 720w, ../img/shots/fox-1280.webp 1280w" sizes="(max-width: 860px) 92vw, 600px">
+                <img src="../img/shots/fox.jpg" width="1280" height="588" loading="lazy" alt="Un renard affamé court après l'écureuil volant dans la forêt.">
+              </picture>
+            </div>
+          </div>
+          <div class="feature-copy">
+            <p class="kicker">Course infinie</p>
+            <h2>Oh oh… un renard affamé&nbsp;!</h2>
+            <p>Le renard est juste derrière toi, et la forêt ne s'arrête jamais. Plus tu cours, plus ça va vite&nbsp;: pas de ligne d'arrivée, seulement ta meilleure distance.</p>
+            <ul class="nut-list">
+              <li>Cours le plus loin possible et bats ton record</li>
+              <li>Ramasse toutes les noisettes en chemin</li>
+              <li>Grimpe des escaliers de piliers de terre jusqu'au ciel</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="feature feature-flip reveal">
+          <div class="feature-media">
+            <div class="phone">
+              <picture>
+                <source type="image/webp" srcset="../img/shots/bear-720.webp 720w, ../img/shots/bear-1280.webp 1280w" sizes="(max-width: 860px) 92vw, 600px">
+                <img src="../img/shots/bear.jpg" width="1280" height="588" loading="lazy" alt="Un ours géant bloque le chemin de l'écureuil volant.">
+              </picture>
+            </div>
+          </div>
+          <div class="feature-copy">
+            <p class="kicker">Attention&nbsp;!</p>
+            <h2>Une forêt pleine de surprises</h2>
+            <ul class="nut-list">
+              <li>Un ours géant bloque le chemin&nbsp;: glisse entre ses pattes ou fais un double saut par-dessus sa tête</li>
+              <li>Un aigle fonce sur toi depuis le côté</li>
+              <li>Des hérissons endormis, des pièges, des troncs qui roulent et des toiles d'araignée</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="feature reveal">
+          <div class="feature-media">
+            <div class="phone">
+              <picture>
+                <source type="image/webp" srcset="../img/shots/powerups-720.webp 720w, ../img/shots/powerups-1280.webp 1280w" sizes="(max-width: 860px) 92vw, 600px">
+                <img src="../img/shots/powerups.jpg" width="1280" height="588" loading="lazy" alt="L'écureuil volant dans une bulle, avec un aimant qui attire les noisettes.">
+              </picture>
+            </div>
+          </div>
+          <div class="feature-copy">
+            <p class="kicker">Bonus</p>
+            <h2>Bulle, aimant, rafale&nbsp;!</h2>
+            <ul class="powerups">
+              <li><img src="../img/icons/bubble.svg" width="64" height="64" alt=""><div><h3>Bulle</h3><p>Un bouclier qui te protège d'un coup.</p></div></li>
+              <li><img src="../img/icons/magnet.svg" width="64" height="64" alt=""><div><h3>Aimant</h3><p>Attire les noisettes autour de toi.</p></div></li>
+              <li><img src="../img/icons/gust.svg" width="64" height="64" alt=""><div><h3>Rafale</h3><p>Un coup de vent qui te pousse en avant.</p></div></li>
+            </ul>
+            <p class="note">Dépense tes noisettes dans la boutique pour les faire durer plus longtemps.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="night" aria-labelledby="night-title">
+      <img class="moon" src="../img/icons/moon.svg" width="64" height="64" alt="">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2 id="night-title">Du coucher de soleil au <span class="nowrap">loup-garou</span></h2>
+          <p>Plus tu cours, plus la forêt change. Au coucher du soleil le ciel devient orange, et la nuit… le renard se transforme en <span class="nowrap">loup-garou&nbsp;!</span></p>
         </div>
-      </section>
-    </div>
+        <ul class="cycle">
+          <li class="reveal">
+            <div class="phone">
+              <picture>
+                <source type="image/webp" srcset="../img/shots/sunset-720.webp 720w, ../img/shots/sunset-1280.webp 1280w" sizes="(max-width: 860px) 80vw, 380px">
+                <img src="../img/shots/sunset.jpg" width="1280" height="588" loading="lazy" alt="La forêt sous un ciel de coucher de soleil orange et rose.">
+              </picture>
+            </div>
+            <h3>Coucher de soleil</h3>
+            <p>Le ciel devient orange et rose. Continue de courir&nbsp;!</p>
+          </li>
+          <li class="reveal">
+            <div class="phone">
+              <picture>
+                <source type="image/webp" srcset="../img/shots/night-720.webp 720w, ../img/shots/night-1280.webp 1280w" sizes="(max-width: 860px) 80vw, 380px">
+                <img src="../img/shots/night.jpg" width="1280" height="588" loading="lazy" alt="L'écureuil volant plane dans la forêt, la nuit.">
+              </picture>
+            </div>
+            <h3>Plane sous les étoiles</h3>
+            <p>La nuit tombe sur la forêt et la lune éclaire ton chemin.</p>
+          </li>
+          <li class="reveal">
+            <div class="phone">
+              <picture>
+                <source type="image/webp" srcset="../img/shots/werewolf-720.webp 720w, ../img/shots/werewolf-1280.webp 1280w" sizes="(max-width: 860px) 80vw, 380px">
+                <img src="../img/shots/werewolf.jpg" width="1280" height="588" loading="lazy" alt="Un loup-garou poursuit l'écureuil volant, la nuit.">
+              </picture>
+            </div>
+            <h3>Voilà le loup-garou&nbsp;!</h3>
+            <p>La nuit, le renard devient un loup-garou. Ne te retourne pas&nbsp;!</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section dawn" aria-labelledby="more-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">Toujours quelque chose à faire</p>
+          <h2 id="more-title">Reviens chaque jour</h2>
+          <p>Des missions, des cadeaux, des écureuils à débloquer et un classement mondial.</p>
+        </div>
+        <div class="bento">
+          <article class="tile t-record reveal">
+            <picture>
+              <source type="image/webp" srcset="../img/shots/record-720.webp 720w, ../img/shots/record-1280.webp 1280w" sizes="(max-width: 1020px) 92vw, 580px">
+              <img src="../img/shots/record.jpg" width="1280" height="588" loading="lazy" alt="L'écureuil volant court près d'une cascade dans la forêt.">
+            </picture>
+            <div class="tile-text">
+              <h3>Bats ton record</h3>
+              <p>Pas de ligne d'arrivée&nbsp;: chaque partie est une nouvelle chance d'aller plus loin.</p>
+            </div>
+          </article>
+          <article class="tile t-missions reveal">
+            <img class="tile-icon" src="../img/icons/missions.svg" width="64" height="64" alt="">
+            <h3><span class="tile-big">100</span> missions</h3>
+            <p>Des plus faciles aux plus folles, il y a toujours un nouveau défi.</p>
+          </article>
+          <article class="tile t-gift reveal">
+            <img class="tile-icon" src="../img/icons/gift.svg" width="64" height="64" alt="">
+            <h3>Cadeau du jour</h3>
+            <p>Reviens chaque jour&nbsp;: ton cadeau grandit de jour en jour.</p>
+          </article>
+          <article class="tile t-squirrels reveal">
+            <img class="avatar" src="../img/icon.png" width="512" height="512" loading="lazy" alt="">
+            <h3>Débloque de nouveaux écureuils</h3>
+            <p>Dépense tes noisettes pour de nouvelles tenues, et trouve la tenue secrète&nbsp;!</p>
+            <ul class="outfits" aria-label="Tenues">
+              <li class="o-grey">Gris</li>
+              <li class="o-scarf">Écharpe rouge</li>
+              <li class="o-aviator">Aviateur</li>
+              <li class="o-snow">Neige</li>
+              <li class="o-ninja">Ninja</li>
+              <li class="o-golden">Doré</li>
+              <li class="o-secret">???</li>
+            </ul>
+          </article>
+          <article class="tile t-leaderboard reveal">
+            <img class="tile-icon" src="../img/icons/trophy.svg" width="64" height="64" alt="">
+            <h3>Classement mondial</h3>
+            <p>Compare ta meilleure distance avec des joueurs du monde entier.</p>
+            <ul class="platforms">
+              <li>Game Center</li>
+              <li>Google Play Jeux</li>
+            </ul>
+          </article>
+          <article class="tile t-lang reveal">
+            <img class="tile-icon" src="../img/icons/globe.svg" width="64" height="64" alt="">
+            <h3>24 langues</h3>
+            <p>Joue dans ta langue.</p>
+          </article>
+          <article class="tile t-offline reveal">
+            <img class="tile-icon" src="../img/icons/plane.svg" width="64" height="64" alt="">
+            <h3>Sans internet</h3>
+            <p>Pas besoin de <span class="nowrap">Wi-Fi&nbsp;:</span> parfait en voiture ou en avion.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="family-title">
+      <div class="wrap">
+        <div class="family reveal">
+          <div class="section-head">
+            <p class="kicker">Pour toute la famille</p>
+            <h2 id="family-title">Drôle et sûr pour les enfants</h2>
+            <p>Classé 4+, avec un style dessin animé mignon, des sons rigolos et aucune mauvaise surprise.</p>
+          </div>
+          <ul class="family-grid">
+            <li>
+              <img src="../img/icons/heart.svg" width="64" height="64" alt="">
+              <h3>Mignon et drôle</h3>
+              <p>Une forêt de dessin animé, des animaux mignons et des sons rigolos.</p>
+            </li>
+            <li>
+              <img src="../img/icons/ad.svg" width="64" height="64" alt="">
+              <h3>Des pubs quand tu veux</h3>
+              <p>Tu regardes une pub seulement si tu veux un bonus. Un seul achat «&nbsp;Sans pub&nbsp;» retire les pubs entre les parties.</p>
+            </li>
+            <li>
+              <img src="../img/icons/shield.svg" width="64" height="64" alt="">
+              <h3>Contrôle parental</h3>
+              <p>Une petite multiplication est demandée avant chaque achat, pour que seuls les grands puissent acheter.</p>
+            </li>
+            <li>
+              <img src="../img/icons/check.svg" width="64" height="64" alt="">
+              <h3>Vie privée d'abord</h3>
+              <p>Pas de compte, progression gardée sur ton appareil, et pubs non personnalisées pour les moins de 16 ans.</p>
+            </li>
+          </ul>
+          <p class="family-more"><a href="privacy.html">Lire notre politique de confidentialité →</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">FAQ</p>
+          <h2 id="faq-title">Questions et réponses</h2>
+        </div>
+        <div class="faq reveal">
+          <details name="faq" open>
+            <summary>Nutty Glide est-il gratuit&nbsp;?</summary>
+            <div class="answer"><p>Oui, le jeu est gratuit à télécharger et à jouer. Un achat facultatif «&nbsp;Sans pub&nbsp;» retire les pubs affichées entre les parties.</p></div>
+          </details>
+          <details name="faq">
+            <summary>Sur quels appareils puis-je jouer&nbsp;?</summary>
+            <div class="answer"><p>Sur iPhone et iPad (iOS et iPadOS 15 ou plus récent) via l'App Store, et sur les téléphones et tablettes Android via Google Play.</p></div>
+          </details>
+          <details name="faq">
+            <summary>Puis-je jouer sans internet&nbsp;?</summary>
+            <div class="answer"><p>Oui&nbsp;! Le jeu fonctionne hors ligne, parfait en voiture ou en avion. Une connexion n'est utile que pour le classement mondial et pour les pubs.</p></div>
+          </details>
+          <details name="faq">
+            <summary>Le jeu convient-il aux enfants&nbsp;?</summary>
+            <div class="answer"><p>Oui, il est classé 4+. Les joueurs de moins de 16 ans ne voient que des pubs non personnalisées adaptées aux enfants, et un contrôle parental s'affiche avant tout achat.</p></div>
+          </details>
+          <details name="faq">
+            <summary>Où ma progression est-elle enregistrée&nbsp;?</summary>
+            <div class="answer"><p>Uniquement sur ton appareil&nbsp;: il n'y a aucun compte à créer. Supprimer le jeu, ou changer de téléphone, fait recommencer le jeu à zéro.</p></div>
+          </details>
+          <details name="faq">
+            <summary>J'ai une question ou j'ai trouvé un bug</summary>
+            <div class="answer"><p>Consulte la <a href="support.html">page d'aide</a> ou écris à <a class="mail" href="mailto:contact@aisqli.com">contact@aisqli.com</a>.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="download" aria-labelledby="cta-title">
+      <div class="sky" aria-hidden="true">
+        <span class="cloud c1"></span>
+        <span class="cloud c2"></span>
+      </div>
+      <div class="wrap cta-in reveal">
+        <img class="cta-icon" src="../img/icon.png" width="512" height="512" loading="lazy" alt="">
+        <h2 id="cta-title">Jusqu'où iras-tu&nbsp;?</h2>
+        <p>Attrape tes noisettes et cours&nbsp;! Gratuit sur iPhone, iPad et Android.</p>
+        <div class="stores">
+          <a href="https://apps.apple.com/app/nutty-glide/id6833694876"><img src="../img/badge-app-store-fr.svg" width="127" height="40" loading="lazy" alt="Télécharger dans l'App Store"></a>
+          <a href="https://play.google.com/store/apps/details?id=com.aisqli.nuttyglide&amp;hl=fr"><img src="../img/badge-google-play-fr.png" width="646" height="192" loading="lazy" alt="Disponible sur Google Play"></a>
+        </div>
+      </div>
+      <div class="land" aria-hidden="true">
+        <div class="layer l-mount"></div>
+        <div class="layer l-far"></div>
+        <div class="layer l-near"></div>
+      </div>
+    </section>
   </main>
 
   <footer class="foot">
     <div class="wrap">
-      <span>© 2026 Nutty Glide</span>
-      <nav>
-        <a href="support.html">Aide</a>
-        <a href="privacy.html">Politique de confidentialité</a>
-        <a href="mailto:contact@aisqli.com">Contact</a>
-      </nav>
+      <div class="foot-grid">
+        <div class="foot-about">
+          <a class="brand" href="./"><img src="../img/icon.png" width="512" height="512" loading="lazy" alt="">Nutty Glide</a>
+          <p>Un jeu de course avec un écureuil volant pour iPhone, iPad et Android. Un jeu indépendant créé en Belgique.</p>
+        </div>
+        <div>
+          <p class="foot-title">Le jeu</p>
+          <ul>
+            <li><a href="#how">Comment jouer</a></li>
+            <li><a href="https://apps.apple.com/app/nutty-glide/id6833694876">App Store</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.aisqli.nuttyglide&amp;hl=fr">Google Play</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="foot-title">Aide</p>
+          <ul>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="support.html">Aide</a></li>
+            <li><a href="privacy.html">Politique de confidentialité</a></li>
+            <li><a href="mailto:contact@aisqli.com">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="foot-title">Langue</p>
+          <ul>
+            <li><a href="../" hreflang="en" lang="en">English</a></li>
+            <li><a href="./" aria-current="page">Français</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="foot-bottom">© 2026 Nutty Glide</p>
     </div>
   </footer>
 </body>

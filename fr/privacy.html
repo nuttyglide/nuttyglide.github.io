@@ -2,28 +2,53 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
   <title>Politique de confidentialité – Nutty Glide</title>
   <meta name="description" content="Comment le jeu Nutty Glide traite tes données : progression gardée sur ton appareil, pubs via Google AdMob, mode enfant sous 16 ans.">
+  <meta name="theme-color" content="#4fadec">
+  <link rel="canonical" href="https://nuttyglide.github.io/fr/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://nuttyglide.github.io/privacy.html">
+  <link rel="alternate" hreflang="fr" href="https://nuttyglide.github.io/fr/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://nuttyglide.github.io/privacy.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nutty Glide">
+  <meta property="og:title" content="Politique de confidentialité – Nutty Glide">
+  <meta property="og:description" content="Comment le jeu Nutty Glide traite tes données : progression gardée sur ton appareil, pubs via Google AdMob, mode enfant sous 16 ans.">
+  <meta property="og:url" content="https://nuttyglide.github.io/fr/privacy.html">
+  <meta property="og:image" content="https://nuttyglide.github.io/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="../img/favicon.png">
   <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
-  <link rel="alternate" hreflang="en" href="../privacy.html">
+  <link rel="preload" href="../fonts/LilitaOne-Regular.woff" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="../style.css">
 </head>
-<body>
+<body class="page">
+  <a class="skip" href="#main">Aller au contenu</a>
+
   <header class="top">
     <div class="wrap">
-      <a class="brand" href="./"><img src="../img/icon.png" alt="">Nutty Glide</a>
-      <nav class="nav">
-        <a href="support.html">Aide</a>
-        <a href="../privacy.html" hreflang="en" lang="en">English</a>
+      <a class="brand" href="./"><img src="../img/icon.png" width="512" height="512" alt="">Nutty Glide</a>
+      <nav class="nav" aria-label="Menu principal">
+        <a class="nav-link" href="./#how">Comment jouer</a>
+        <a class="nav-link" href="./#faq">FAQ</a>
+        <a class="nav-link" href="support.html">Aide</a>
+        <a class="lang" href="../privacy.html" hreflang="en" lang="en"><span aria-hidden="true">EN</span><span class="sr-only">English</span></a>
+        <a class="btn btn-small" href="./#download">Jouer</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main">
+    <div class="sky" aria-hidden="true">
+      <span class="cloud c1"></span>
+      <span class="cloud c2"></span>
+    </div>
     <div class="wrap">
       <article class="board">
         <h1>Politique de confidentialité</h1>
@@ -96,12 +121,37 @@
 
   <footer class="foot">
     <div class="wrap">
-      <span>© 2026 Nutty Glide</span>
-      <nav>
-        <a href="./">Accueil</a>
-        <a href="support.html">Aide</a>
-        <a href="mailto:contact@aisqli.com">Contact</a>
-      </nav>
+      <div class="foot-grid">
+        <div class="foot-about">
+          <a class="brand" href="./"><img src="../img/icon.png" width="512" height="512" loading="lazy" alt="">Nutty Glide</a>
+          <p>Un jeu de course avec un écureuil volant pour iPhone, iPad et Android. Un jeu indépendant créé en Belgique.</p>
+        </div>
+        <div>
+          <p class="foot-title">Le jeu</p>
+          <ul>
+            <li><a href="./#how">Comment jouer</a></li>
+            <li><a href="https://apps.apple.com/app/nutty-glide/id6833694876">App Store</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.aisqli.nuttyglide&amp;hl=fr">Google Play</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="foot-title">Aide</p>
+          <ul>
+            <li><a href="./#faq">FAQ</a></li>
+            <li><a href="support.html">Aide</a></li>
+            <li><a href="privacy.html" aria-current="page">Politique de confidentialité</a></li>
+            <li><a href="mailto:contact@aisqli.com">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="foot-title">Langue</p>
+          <ul>
+            <li><a href="../privacy.html" hreflang="en" lang="en">English</a></li>
+            <li><a href="privacy.html" aria-current="page">Français</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="foot-bottom">© 2026 Nutty Glide</p>
     </div>
   </footer>
 </body>

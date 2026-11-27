@@ -2,68 +2,432 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
   <title>Nutty Glide: Squirrel Run</title>
   <meta name="description" content="Run, jump and glide through the forest with a flying squirrel. The fox is right behind you! A free game for iPhone, iPad and Android.">
+  <meta name="theme-color" content="#4fadec">
+  <meta name="apple-itunes-app" content="app-id=6833694876">
+  <link rel="canonical" href="https://nuttyglide.github.io/">
+  <link rel="alternate" hreflang="en" href="https://nuttyglide.github.io/">
+  <link rel="alternate" hreflang="fr" href="https://nuttyglide.github.io/fr/">
+  <link rel="alternate" hreflang="x-default" href="https://nuttyglide.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nutty Glide">
+  <meta property="og:title" content="Nutty Glide: Squirrel Run">
+  <meta property="og:description" content="Run, jump and glide through the forest with a flying squirrel. The fox is right behind you! Free on iPhone, iPad and Android.">
+  <meta property="og:url" content="https://nuttyglide.github.io/">
+  <meta property="og:image" content="https://nuttyglide.github.io/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-  <link rel="alternate" hreflang="fr" href="fr/">
+  <link rel="preload" href="fonts/LilitaOne-Regular.woff" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
+
   <header class="top">
     <div class="wrap">
-      <a class="brand" href="./"><img src="img/icon.png" alt="">Nutty Glide</a>
-      <nav class="nav">
-        <a href="support.html">Support</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="fr/" hreflang="fr" lang="fr">Français</a>
+      <a class="brand" href="./"><img src="img/icon.png" width="512" height="512" alt="">Nutty Glide</a>
+      <nav class="nav" aria-label="Main">
+        <a class="nav-link" href="#how">How to play</a>
+        <a class="nav-link" href="#faq">FAQ</a>
+        <a class="nav-link" href="support.html">Support</a>
+        <a class="lang" href="fr/" hreflang="fr" lang="fr"><span aria-hidden="true">FR</span><span class="sr-only">Français</span></a>
+        <a class="btn btn-small" href="#download">Play free</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <div class="wrap">
-      <section class="hero">
-        <img src="img/logo.png" width="900" height="585" alt="Nutty Glide">
-        <p class="tagline">Run, jump and glide through the forest.<br>The fox is right behind you!</p>
-        <div class="stores">
-          <a href="https://apps.apple.com/app/nutty-glide/id6833694876"><img src="img/badge-app-store.svg" width="120" height="40" alt="Download on the App Store"></a>
-          <a href="https://play.google.com/store/apps/details?id=com.aisqli.nuttyglide"><img src="img/badge-google-play.png" width="564" height="168" alt="Get it on Google Play"></a>
-        </div>
-      </section>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="sky" aria-hidden="true">
+        <span class="sun"></span>
+        <span class="cloud c1"></span>
+        <span class="cloud c2"></span>
+        <span class="cloud c3"></span>
+      </div>
 
-      <section class="features">
-        <div class="card">
-          <h3>Tap to jump</h3>
-          <p>The longer you hold, the higher the flying squirrel jumps. Tap again in mid-air for a double jump.</p>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><img src="img/icons/hazelnut.svg" width="64" height="64" alt="">Free endless runner · iPhone, iPad &amp; Android</p>
+          <h1 id="hero-title"><img class="logo" src="img/logo.png" width="900" height="585" alt="Nutty Glide"></h1>
+          <p class="tagline">The fox is right behind you!</p>
+          <p class="lead">Run, jump and glide through an endless cartoon forest with a flying squirrel. Collect hazelnuts, dodge the traps and see how far you can go!</p>
+          <div class="stores">
+            <a href="https://apps.apple.com/app/nutty-glide/id6833694876"><img src="img/badge-app-store.svg" width="120" height="40" alt="Download on the App Store"></a>
+            <a href="https://play.google.com/store/apps/details?id=com.aisqli.nuttyglide"><img src="img/badge-google-play.png" width="564" height="168" alt="Get it on Google Play"></a>
+          </div>
+          <ul class="chips">
+            <li><img src="img/icons/check.svg" width="64" height="64" alt="">Free to play</li>
+            <li><img src="img/icons/plane.svg" width="64" height="64" alt="">Plays offline</li>
+            <li><img src="img/icons/heart.svg" width="64" height="64" alt="">Rated 4+</li>
+          </ul>
         </div>
-        <div class="card">
-          <h3>Hold to glide</h3>
-          <p>Spread your wings and glide over the water, the brambles and the traps.</p>
+
+        <div class="hero-art">
+          <div class="phone">
+            <picture>
+              <source type="image/webp" srcset="img/shots/glide-720.webp 720w, img/shots/glide-1280.webp 1280w" sizes="(max-width: 1020px) 92vw, 620px">
+              <img src="img/shots/glide.jpg" width="1280" height="588" alt="The flying squirrel glides over the forest between earth-pillar stairs, with hazelnuts to collect.">
+            </picture>
+          </div>
+          <p class="sticker s1"><img src="img/icons/tap.svg" width="64" height="64" alt="">Tap to jump</p>
+          <p class="sticker s2"><img src="img/icons/glide.svg" width="64" height="64" alt="">Hold to glide</p>
+          <img class="nut n1" src="img/icons/hazelnut.svg" width="64" height="64" alt="">
+          <img class="nut n2" src="img/icons/hazelnut.svg" width="64" height="64" alt="">
+          <img class="nut n3" src="img/icons/hazelnut.svg" width="64" height="64" alt="">
         </div>
-        <div class="card">
-          <h3>Outrun the fox</h3>
-          <p>Watch out for the eagle by day, and for the werewolf when night falls!</p>
+      </div>
+
+      <div class="land" aria-hidden="true">
+        <div class="layer l-mount"></div>
+        <div class="layer l-far"></div>
+        <div class="layer l-near"></div>
+        <div class="layer l-bush"></div>
+      </div>
+    </section>
+
+    <section class="ground" aria-label="The game in numbers">
+      <ul class="stats wrap">
+        <li><strong>1</strong><span>finger to play</span></li>
+        <li><strong>100</strong><span>missions</span></li>
+        <li><strong>24</strong><span>languages</span></li>
+        <li><strong>∞</strong><span>no finish line</span></li>
+      </ul>
+    </section>
+
+    <section class="section" id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">How to play</p>
+          <h2 id="how-title">One finger. An endless forest.</h2>
+          <p>Learn it in a second, and you won't want to stop.</p>
         </div>
-        <div class="card">
-          <h3>Collect hazelnuts</h3>
-          <p>Unlock new squirrels and make your bubble, magnet and gust last longer.</p>
+        <ol class="steps">
+          <li class="step reveal">
+            <div class="step-icon"><img src="img/icons/tap.svg" width="64" height="64" alt=""></div>
+            <h3>Tap to jump</h3>
+            <p>Tap again in mid-air for a double jump, or bounce off a wall.</p>
+          </li>
+          <li class="step reveal">
+            <div class="step-icon"><img src="img/icons/hold.svg" width="64" height="64" alt=""></div>
+            <h3>Hold to jump higher</h3>
+            <p>The longer you hold, the higher the flying squirrel jumps.</p>
+          </li>
+          <li class="step reveal">
+            <div class="step-icon"><img src="img/icons/glide.svg" width="64" height="64" alt=""></div>
+            <h3>Keep holding to glide</h3>
+            <p>Spread your wings and glide over the water, the brambles and the traps.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Features">
+      <div class="wrap features">
+        <article class="feature reveal">
+          <div class="feature-media">
+            <div class="phone">
+              <picture>
+                <source type="image/webp" srcset="img/shots/fox-720.webp 720w, img/shots/fox-1280.webp 1280w" sizes="(max-width: 860px) 92vw, 600px">
+                <img src="img/shots/fox.jpg" width="1280" height="588" loading="lazy" alt="A hungry fox runs after the flying squirrel through the forest.">
+              </picture>
+            </div>
+          </div>
+          <div class="feature-copy">
+            <p class="kicker">Endless runner</p>
+            <h2>Uh-oh… a hungry fox!</h2>
+            <p>The fox is right behind you, and the forest never ends. The further you run, the faster it gets: there is no finish line, only your best distance.</p>
+            <ul class="nut-list">
+              <li>Run as far as you can and beat your record</li>
+              <li>Grab every hazelnut on the way</li>
+              <li>Climb sky-high stairs of earth pillars</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="feature feature-flip reveal">
+          <div class="feature-media">
+            <div class="phone">
+              <picture>
+                <source type="image/webp" srcset="img/shots/bear-720.webp 720w, img/shots/bear-1280.webp 1280w" sizes="(max-width: 860px) 92vw, 600px">
+                <img src="img/shots/bear.jpg" width="1280" height="588" loading="lazy" alt="A giant bear blocks the path of the flying squirrel.">
+              </picture>
+            </div>
+          </div>
+          <div class="feature-copy">
+            <p class="kicker">Watch out!</p>
+            <h2>A forest full of surprises</h2>
+            <ul class="nut-list">
+              <li>A giant bear blocks the path: slip between its legs or double jump over its head</li>
+              <li>An eagle swoops in from the side</li>
+              <li>Sleepy hedgehogs, animal traps, rolling logs and spider webs</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="feature reveal">
+          <div class="feature-media">
+            <div class="phone">
+              <picture>
+                <source type="image/webp" srcset="img/shots/powerups-720.webp 720w, img/shots/powerups-1280.webp 1280w" sizes="(max-width: 860px) 92vw, 600px">
+                <img src="img/shots/powerups.jpg" width="1280" height="588" loading="lazy" alt="The flying squirrel inside a bubble, with a magnet pulling hazelnuts.">
+              </picture>
+            </div>
+          </div>
+          <div class="feature-copy">
+            <p class="kicker">Power-ups</p>
+            <h2>Bubble, Magnet, Gust!</h2>
+            <ul class="powerups">
+              <li><img src="img/icons/bubble.svg" width="64" height="64" alt=""><div><h3>Bubble</h3><p>A shield that saves you from one hit.</p></div></li>
+              <li><img src="img/icons/magnet.svg" width="64" height="64" alt=""><div><h3>Magnet</h3><p>Pulls the hazelnuts around you.</p></div></li>
+              <li><img src="img/icons/gust.svg" width="64" height="64" alt=""><div><h3>Gust</h3><p>A burst of wind that blows you forward.</p></div></li>
+            </ul>
+            <p class="note">Spend your hazelnuts in the shop to make them last longer.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="night" aria-labelledby="night-title">
+      <img class="moon" src="img/icons/moon.svg" width="64" height="64" alt="">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2 id="night-title">From sunset to werewolf</h2>
+          <p>The longer you run, the more the forest changes. At sunset the sky turns orange, and at night… the fox becomes a werewolf!</p>
         </div>
-      </section>
-    </div>
+        <ul class="cycle">
+          <li class="reveal">
+            <div class="phone">
+              <picture>
+                <source type="image/webp" srcset="img/shots/sunset-720.webp 720w, img/shots/sunset-1280.webp 1280w" sizes="(max-width: 860px) 80vw, 380px">
+                <img src="img/shots/sunset.jpg" width="1280" height="588" loading="lazy" alt="The forest under an orange and pink sunset sky.">
+              </picture>
+            </div>
+            <h3>Golden sunset</h3>
+            <p>The sky turns orange and pink. Keep running!</p>
+          </li>
+          <li class="reveal">
+            <div class="phone">
+              <picture>
+                <source type="image/webp" srcset="img/shots/night-720.webp 720w, img/shots/night-1280.webp 1280w" sizes="(max-width: 860px) 80vw, 380px">
+                <img src="img/shots/night.jpg" width="1280" height="588" loading="lazy" alt="The flying squirrel glides through the forest at night.">
+              </picture>
+            </div>
+            <h3>Glide under the stars</h3>
+            <p>Night falls on the forest and the moon lights your way.</p>
+          </li>
+          <li class="reveal">
+            <div class="phone">
+              <picture>
+                <source type="image/webp" srcset="img/shots/werewolf-720.webp 720w, img/shots/werewolf-1280.webp 1280w" sizes="(max-width: 860px) 80vw, 380px">
+                <img src="img/shots/werewolf.jpg" width="1280" height="588" loading="lazy" alt="A werewolf chases the flying squirrel at night.">
+              </picture>
+            </div>
+            <h3>Here comes the werewolf!</h3>
+            <p>At night the fox becomes a werewolf. Don't look back!</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section dawn" aria-labelledby="more-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">Always something to do</p>
+          <h2 id="more-title">Come back every day</h2>
+          <p>Missions, gifts, squirrels to unlock and a world leaderboard.</p>
+        </div>
+        <div class="bento">
+          <article class="tile t-record reveal">
+            <picture>
+              <source type="image/webp" srcset="img/shots/record-720.webp 720w, img/shots/record-1280.webp 1280w" sizes="(max-width: 1020px) 92vw, 580px">
+              <img src="img/shots/record.jpg" width="1280" height="588" loading="lazy" alt="The flying squirrel runs past a waterfall in the forest.">
+            </picture>
+            <div class="tile-text">
+              <h3>Beat your record</h3>
+              <p>No finish line: every run is a new chance to go further.</p>
+            </div>
+          </article>
+          <article class="tile t-missions reveal">
+            <img class="tile-icon" src="img/icons/missions.svg" width="64" height="64" alt="">
+            <h3><span class="tile-big">100</span> missions</h3>
+            <p>From easy to crazy, there is always a new challenge.</p>
+          </article>
+          <article class="tile t-gift reveal">
+            <img class="tile-icon" src="img/icons/gift.svg" width="64" height="64" alt="">
+            <h3>Daily gift</h3>
+            <p>Come back every day: your gift grows bigger each day.</p>
+          </article>
+          <article class="tile t-squirrels reveal">
+            <img class="avatar" src="img/icon.png" width="512" height="512" loading="lazy" alt="">
+            <h3>Unlock new squirrels</h3>
+            <p>Spend your hazelnuts on new outfits, and find the secret one!</p>
+            <ul class="outfits" aria-label="Outfits">
+              <li class="o-grey">Grey</li>
+              <li class="o-scarf">Red scarf</li>
+              <li class="o-aviator">Aviator</li>
+              <li class="o-snow">Snow</li>
+              <li class="o-ninja">Ninja</li>
+              <li class="o-golden">Golden</li>
+              <li class="o-secret">???</li>
+            </ul>
+          </article>
+          <article class="tile t-leaderboard reveal">
+            <img class="tile-icon" src="img/icons/trophy.svg" width="64" height="64" alt="">
+            <h3>World leaderboard</h3>
+            <p>Compare your best distance with players all around the world.</p>
+            <ul class="platforms">
+              <li>Game Center</li>
+              <li>Google Play Games</li>
+            </ul>
+          </article>
+          <article class="tile t-lang reveal">
+            <img class="tile-icon" src="img/icons/globe.svg" width="64" height="64" alt="">
+            <h3>24 languages</h3>
+            <p>Play in your own language.</p>
+          </article>
+          <article class="tile t-offline reveal">
+            <img class="tile-icon" src="img/icons/plane.svg" width="64" height="64" alt="">
+            <h3>Plays offline</h3>
+            <p>No <span class="nowrap">Wi-Fi</span> needed: perfect for car trips and flights.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="family-title">
+      <div class="wrap">
+        <div class="family reveal">
+          <div class="section-head">
+            <p class="kicker">For the whole family</p>
+            <h2 id="family-title">Fun and safe for kids</h2>
+            <p>Rated 4+, with a cute cartoon style, funny sounds and no bad surprises.</p>
+          </div>
+          <ul class="family-grid">
+            <li>
+              <img src="img/icons/heart.svg" width="64" height="64" alt="">
+              <h3>Cute and funny</h3>
+              <p>A cartoon forest, cute animals and funny sounds.</p>
+            </li>
+            <li>
+              <img src="img/icons/ad.svg" width="64" height="64" alt="">
+              <h3>Ads when you want</h3>
+              <p>Watch one only for a bonus you choose. A single “No ads” purchase removes the ads between runs.</p>
+            </li>
+            <li>
+              <img src="img/icons/shield.svg" width="64" height="64" alt="">
+              <h3>Parental check</h3>
+              <p>A small multiplication is asked before every purchase, so only grown-ups can buy.</p>
+            </li>
+            <li>
+              <img src="img/icons/check.svg" width="64" height="64" alt="">
+              <h3>Privacy first</h3>
+              <p>No account, progress kept on your device, and non-personalized ads for players under 16.</p>
+            </li>
+          </ul>
+          <p class="family-more"><a href="privacy.html">Read our privacy policy →</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">FAQ</p>
+          <h2 id="faq-title">Questions and answers</h2>
+        </div>
+        <div class="faq reveal">
+          <details name="faq" open>
+            <summary>Is Nutty Glide free?</summary>
+            <div class="answer"><p>Yes, the game is free to download and play. An optional “No ads” purchase removes the ads shown between runs.</p></div>
+          </details>
+          <details name="faq">
+            <summary>On which devices can I play?</summary>
+            <div class="answer"><p>On iPhone and iPad (iOS and iPadOS 15 or later) from the App Store, and on Android phones and tablets from Google Play.</p></div>
+          </details>
+          <details name="faq">
+            <summary>Can I play without internet?</summary>
+            <div class="answer"><p>Yes! The game works offline, perfect for car trips and flights. You only need a connection for the world leaderboard and for ads.</p></div>
+          </details>
+          <details name="faq">
+            <summary>Is it suitable for children?</summary>
+            <div class="answer"><p>Yes, it is rated 4+. Players under 16 only get non-personalized ads suitable for children, and a parental check is shown before any purchase.</p></div>
+          </details>
+          <details name="faq">
+            <summary>Where is my progress saved?</summary>
+            <div class="answer"><p>On your device only: there is no account to create. Deleting the game, or moving to another phone, starts the game over.</p></div>
+          </details>
+          <details name="faq">
+            <summary>I have a question or found a bug</summary>
+            <div class="answer"><p>Have a look at the <a href="support.html">support page</a> or write to <a class="mail" href="mailto:contact@aisqli.com">contact@aisqli.com</a>.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="download" aria-labelledby="cta-title">
+      <div class="sky" aria-hidden="true">
+        <span class="cloud c1"></span>
+        <span class="cloud c2"></span>
+      </div>
+      <div class="wrap cta-in reveal">
+        <img class="cta-icon" src="img/icon.png" width="512" height="512" loading="lazy" alt="">
+        <h2 id="cta-title">How far can you go?</h2>
+        <p>Grab your hazelnuts and run! Free on iPhone, iPad and Android.</p>
+        <div class="stores">
+          <a href="https://apps.apple.com/app/nutty-glide/id6833694876"><img src="img/badge-app-store.svg" width="120" height="40" loading="lazy" alt="Download on the App Store"></a>
+          <a href="https://play.google.com/store/apps/details?id=com.aisqli.nuttyglide"><img src="img/badge-google-play.png" width="564" height="168" loading="lazy" alt="Get it on Google Play"></a>
+        </div>
+      </div>
+      <div class="land" aria-hidden="true">
+        <div class="layer l-mount"></div>
+        <div class="layer l-far"></div>
+        <div class="layer l-near"></div>
+      </div>
+    </section>
   </main>
 
   <footer class="foot">
     <div class="wrap">
-      <span>© 2026 Nutty Glide</span>
-      <nav>
-        <a href="support.html">Support</a>
-        <a href="privacy.html">Privacy policy</a>
-        <a href="mailto:contact@aisqli.com">Contact</a>
-      </nav>
+      <div class="foot-grid">
+        <div class="foot-about">
+          <a class="brand" href="./"><img src="img/icon.png" width="512" height="512" loading="lazy" alt="">Nutty Glide</a>
+          <p>A flying squirrel endless runner for iPhone, iPad and Android. An independent game made in Belgium.</p>
+        </div>
+        <div>
+          <p class="foot-title">Game</p>
+          <ul>
+            <li><a href="#how">How to play</a></li>
+            <li><a href="https://apps.apple.com/app/nutty-glide/id6833694876">App Store</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.aisqli.nuttyglide">Google Play</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="foot-title">Help</p>
+          <ul>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="privacy.html">Privacy policy</a></li>
+            <li><a href="mailto:contact@aisqli.com">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="foot-title">Language</p>
+          <ul>
+            <li><a href="./" aria-current="page">English</a></li>
+            <li><a href="fr/" hreflang="fr" lang="fr">Français</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="foot-bottom">© 2026 Nutty Glide</p>
     </div>
   </footer>
 </body>
